@@ -7,6 +7,67 @@
  text-align: center;
 }
 
+#aboutMeShort{
+    padding: 5px;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    text-align:left;
+
+}
+
+#aboutMeLong{
+    padding:10px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    text-align:left;   
+}
+
+.card {
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid black;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    }
+
+.card-header{
+    display:inline;
+}
+
+
+
+#name{
+    display: block;
+    margin:auto;
+    width: fit-content;
+    text-align: center;
+    text-emphasis:bold;
+}
+
+#role{
+    
+    margin-left: auto;
+    margin-right: 0;
+    
+    width: fit-content;
+    
+    
+}
+
+#period{
+    
+    margin-left: 0;
+    margin-right:auto;
+    width: fit-content; 
+   
+}
+
+.role-ul{
+    text-align: left;
+}
+
 
 h1{
     background-color:rgb(0, 64, 128);
