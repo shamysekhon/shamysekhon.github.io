@@ -7,9 +7,10 @@ aboutLong.innerHTML+="I've always sought out opportunities and challenges that a
 
 var expData=[{
     num:1,
-    name:"Infosys",
+    name:"Infosys Ltd",
+    location:"Jaipur, Rajasthan, India",
     role:"Senior Systems Engineer",
-    period:"08/2018 - Present",
+    period:"August 2018 - Present",
     desc:"Infosys is a global leader in next-generation digital services and consulting.",
     title1:"Application Development and Maintenance(ADM)",
     roles:["Working in an agile team to develop and maintain a logistic management enterprise application for a retail organization",
@@ -21,7 +22,53 @@ var expData=[{
     accomplishments:["Stabilized the application from ~50 incidents per month to <5 incidents per month",
                     "Delivered 50 releases in Production over 2.5 years of service, with no defects"
                 ]
-}];
+},
+{
+    num:2,
+    name:"Infosys Ltd",
+    location:"Mysuru, Karnataka, India",
+    role:"Systems Engineer Trainee",
+    period:"February 2018 - July 2018",
+    desc:"Infosys is a global leader in next-generation digital services and consulting.",
+    title1:"Java Stream Trainee",
+    roles:["Learned about technologies like Python, SQL, AngularJS, Hibernate, etc.",
+        "Learned to use agile methodology for software development",
+        "Built a project in a team of 5 using Angular framework."]
+     
+},
+{
+    num:3,
+    name:"AIESEC in Ludhiana",
+    location:"Ludhiana, Punjab, India",
+    role:"Volunteer",
+    period:"Feburary 2015 - February 2018",
+    desc:"AIESEC is a global platform for young people to develop their leadership potential through international internships and volunteer opportunities.",
+    title1:"Roles held",
+    roles:["Local Comittee President, responsible for overall management of the local chapter, Feb 2017- Feb 2018",
+        "Local Committee Vice President Finance, overlooked all the financial responsibilities for the management of local chapter, 2016",
+        "Local Committee Vice President iGV, responsible for hosting volunteers from abroad and creating volunteer opportunities in the city, 2015"],
+    accomplishments:["Organized various social events like Global Village, Balakalakar, for generating awareness about social issues and Sustainable Development Goals",
+                    "Got recognized in the city for the good work done",
+                    "Delivered seminars/sessions in various colleges in the city",
+                "Conducted interviews for volunteers"]
+     
+},
+{
+    num:4,
+    name:"Pehchan",
+    location:"Ludhiana, Punjab, India",
+    role:"Organizer/ Presenter",
+    period:"July 2016 - December 2017",
+    desc:"A group of 3 college students who wanted to empower under-privileged school children",
+    title1:"Organizing Social Events",
+    roles:["Delivered personality development sessions to school children in summer camps, 2016 and 2017",
+        "Organized soft skills workshops in various Government Schools for the underprivileged children",
+        "Organized social events for collecting and distributing gifts for underprivileged children"]
+     
+}
+
+
+];
 
 var container= document.getElementById("experienceCards");
 expData.forEach((result, idx)=>{
@@ -30,15 +77,17 @@ expData.forEach((result, idx)=>{
     var content = `
     <div class="card">
     <div class="card-header"  id="heading-${idx}">
-    <p id="name">${result.name}</p> 
+    <p id="name">${result.name}</p>
+    <p id="locationDiv">${result.location}</p> 
     </div>
 
     <div >
       <div class="card-body id="heading-${idx}">
-      <p id="period">${result.period}</p> <p id="role">${result.role}</p>
+     <table> <tr> <td id="period">${result.period}</td> <td></td>
+     <td id="role">${result.role}</td></tr></table>
       
-        <p>${result.desc}</p>
-        <h5>${result.title1}</h5>
+        <i>${result.desc}</i>
+        <h4>${result.title1}</h4>
        `;
 
     rolesList=makeUl(result.roles);
