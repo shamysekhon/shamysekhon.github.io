@@ -20,7 +20,8 @@ var expData=[{
         "Developing POC's for demonstration of solution approach for a proablem",
         "Tools: Java, J2EE, Android //Kafka // Vue.JS // Sonarqube // Hibernate// Websphere"],
     accomplishments:["Stabilized the application from ~50 incidents per month to <5 incidents per month",
-                    "Delivered 50 releases in Production over 2.5 years of service, with no defects"
+                    "Delivered 50 releases in Production over 2.5 years of service, with no defects",
+                    "Automated quality checks by integrating Sonarqube with Jenkins"
                 ]
 },
 {
@@ -108,13 +109,137 @@ expData.forEach((result, idx)=>{
 });  
 
 
-function makeUl(list){
-        var myList=""
-        list.forEach(function(item){
-            myList+="<li>"+item+"</li>";
-        });         
-        
-         return myList;    
-}
+
+
+
+var projContainer= document.getElementById("projectCards");
+projects.forEach(function(result, idx) {
+    
+    projContainer.innerHTML+=`<div class="projectCard" id="card-${idx}">`+projInfo(result,idx)+`</div>`}, this);
+
+var skillContainer=document.getElementById("skillCards");
+skills.forEach(
+    function(result,idx){
+        skillContainer.innerHTML+=`<div class="skillCard" id="skill-card-${idx}">`+skillInfo(result,idx)+`</div>`
+    }, this);
+
 
 }
+
+var projects=[
+    {   id:1,
+        projectTitle:"Used Products Marketplace",
+        projectDesc:"Built an app similar to Olx, for buying and selling of used products", 
+        features:["Used Angular.JS framework along with Java backend and Hibernate.","First experience working in an Agile team of 6 people"]
+           },
+    { id:2,
+        projectTitle:"Event Management System",
+     projectDesc:"Designed and developed a web application for management of college fests, like scheduling of roles, adding activities and enrolment of participants in the activities", 
+     features:["College Major Project, created in a team of 2 people", "Used Django framework along with php for backend"]
+    },
+    {id:3,
+    projectTitle:"OCR Financial Management System",
+    projectDesc:"Web application in Javascript for scannning bills and adding the expenses from the same into google tracker",
+    features:["Used open-source OCR engine 'Tesseract JS' for optical character recognition","Web application written using Html, CSS and Javascript","Used Google sheets API for input into the Sheets"]
+    },
+    {id:4,
+    projectTitle:"Punjabi Speech Assistant- SiRA",
+    projectDesc:"Speech assistant in which user could say the command in punjabi to perform some basic fucntions",
+    features:["Built using Node.js framework","Client-side scripting done","Understands 5 basic commands"]}
+];
+
+function showFeatures(object){
+    var projCard= document.getElementById(object.id).parentElement;
+    content=""
+    var featuresList="";
+    console.log(projCard.id);
+    var projContent = `<div class="project-card-div">
+    <h2>Features</h2>`;
+
+    featuresList=makeUl(projects[projCard.id].features);
+    featuresList="<ul class='features-ul'>"+featuresList+"</ul>";
+    projContent+=featuresList;
+    projContent+=`</div>`;
+    projCard.innerHTML=projContent;
+    var goBack=document.createElement("button");
+    goBack.innerHTML="Return";
+    projCard.appendChild(goBack);
+    //goBack.onclick=projInfo(projCard.parentElement, projects[projCard.id], projects[projCard.id] );
+    goBack.addEventListener("click",
+    function(){
+    projCard.parentElement.parentElement.innerHTML=projInfo(projects[projCard.id], projCard.id )}, false );
+
+};
+
+
+function makeUl(list){
+    var myList=""
+    list.forEach(function(item){
+        myList+="<li>"+item+"</li>";
+    });         
+    
+     return myList;    
+};
+
+function projInfo( result, idx){
+    
+    var content = `
+    
+
+    <div class="project-card-div"  id="card-${idx}">
+
+    <p id="name">${result.projectTitle}</p>
+    <div class="info" id="${idx}">
+    <p >${result.projectDesc}</p>
+    <img class="proj-img" src="${result.id}.png"><br>
+    <button id="btn-${idx}" onclick="showFeatures(this)">Show more</button> 
+    </div></div>
+       `;
+    
+    return content;
+
+};
+
+var skills=[
+    {
+        type:"Back-end",
+        technologies:["Java"]},
+    {
+        type:"HTML",
+        technologies:["HTML5"]
+    },
+    {
+        type:"CSS",
+        technologies:["CSS3", "Bootstrap"]
+
+    },
+    {
+        type:"Mobile Development",
+        technologies:["Android 10"]
+    },
+    {
+        type:"other",
+        technologies:["Git","Kafka","Hibernate","Jenkins","Sonarqube"]
+    },
+    {
+        type:"JavaScript",
+        technologies:["JavaScript", "Angular", "Vue","jQuery"]
+    }
+
+];
+
+function skillInfo( result, idx){
+    
+    var content = `   
+
+    <div class="skill-card-div"  id="skill-card-${idx}">
+
+    <p id="skill-name">${result.type}</p>
+    <div class="info" id="${idx}">`;
+    
+    
+    content+="<ul class='skills-ul'>"+makeUl(result.technologies)+"</ul></div></div>";
+    
+    return content;
+
+};
