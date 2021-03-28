@@ -1,0 +1,305 @@
+.topmenu ul li.active a, .topmenu ul li a:hover {
+    text-decoration:none;
+    color:#fff;
+    background:url(../images/menu_a.jpg) no-repeat center top;
+}
+.mainContent{
+ 
+ height: fit-content;
+ border: 0.5mm solid black;
+ border-left: none;
+ border-right: 0.5mm solid black;
+ text-align: center;
+ 
+}
+
+.main{
+    margin-left: 240px;
+}
+
+#aboutMeShort{
+    padding: 5px;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    text-align:left;
+
+}
+
+#aboutMeLong{
+    padding:10px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    text-align:left;   
+}
+
+.card {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 1rem;
+    border: 3px solid black;
+    border-style: ridge;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    }
+
+.card-header{
+    display:inline;
+}
+
+
+
+#name{
+    font-size: 20px;
+    display: block;
+    margin:auto;
+    width: fit-content;
+    text-align: center;
+    font-weight: bold;
+}
+
+#skill-name{
+    font-size: 20px;
+    display: block;
+    margin:auto;
+    width:auto;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    background-color:rgb(20, 0, 134);
+    color: linen;
+    text-align: center;
+    font-weight: bold;
+    padding:10px;
+}
+
+#role{
+    
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+    
+    width: 50%;
+    
+    
+}
+
+#period{
+    
+    margin-left: 0;
+    margin-right:auto;
+    width: 50%; 
+   
+}
+
+#locationDiv{
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+table{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    column-span: all;
+    padding:10px;
+
+}
+
+
+.role-ul{
+    text-align: left;
+}
+
+
+h1{
+    background-color:rgb(0, 64, 128);
+    margin-block-start: 2px;
+    color:powderblue;
+    text-align: center;
+    text-shadow: 2px 2px black;
+
+}
+
+
+.projectCard{
+    width: 500px;
+    height: 250px;
+    display:inline-table;
+    margin:20px;
+    padding:20px;
+    border: 3px solid black;
+    border-style:outset;
+
+}
+
+.project-card-div{
+    margin:auto;
+    width: 500px;
+    height: 450px;
+}
+
+.skillCard{
+    display:inline-flex;
+    overflow:auto;
+    width: inherit;
+    margin:auto;
+    
+}
+
+.skill-card-div{
+    display:block; 
+    
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border:1px black solid ;
+    align-items: center;
+    margin: 15px;
+    
+    
+}
+
+.awardCard, .eduCard, .contactCard{
+    display: inline-flex;
+    margin:10px;
+    width:inherit;
+    overflow: auto;
+
+}
+
+.award-name{
+    
+    font-weight: bold;
+
+}
+
+.award-card-div, .edu-card-div{
+    display: inline-table;
+    
+    padding: 10px;
+    width: 300px;
+    height: 150px;
+    border:1px black solid ;
+    margin: 15px;
+    
+}
+
+.skills-ul{
+    margin:10px;
+    display: inline-table;
+    list-style-type:none;
+    margin-top:20px;
+    padding: 10px;
+    font-style: italic;
+    
+    
+    
+}
+
+.edu-name{
+    font-size: 20px;
+    font-weight: bold;
+    width: 220px;
+    margin: auto;
+
+}
+
+.uni-name{
+    font-size:18px;
+}
+
+.college-name{
+    font-weight: bold;
+}
+
+.proj-img{
+    border: 2px solid grey;
+    width:500px;
+    height: 300px;
+}
+
+.place{}
+
+.percentile{}
+
+.contact-card-div{
+    display: inline-flex;
+    width:fit-content;
+    padding: 10px;
+    height: 50px;
+    border: 3px solid rgb(9, 9, 95);
+    border-radius: 10px;
+    color:rgb(20, 0, 134);
+}
+
+.contact-detail{
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
+.contact-image{
+    height: 50px;
+}
+
+#my-name{
+    color: ivory;
+    font-size: 25px;
+    font-family:Georgia, 'Times New Roman', Times, serifx;
+}
+
+#my-role{
+    color: ivory;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serifx;
+    text-align: left;
+}
+#mySideNav{
+    width:250px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(0, 64, 128); 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: powderblue;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+    font-weight: bold;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

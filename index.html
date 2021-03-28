@@ -1,10 +1,52 @@
 <html>
- <link rel="stylesheet" href="style.css">
- <script src="script.js"></script>
+ <link rel="stylesheet" href="css/style.css">
+
+ <script src="js/script.js"></script>
+ <script
+  src="https://code.jquery.com/jquery-1.10.2.min.js"
+  integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg="
+  crossorigin="anonymous"></script>
+ <script type="text/javascript">
+    $(function() {
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+
+        // passes on every "a" tag
+        $(".sidenav").each(function() {
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).closest("a").addClass("active");
+                //for making parent of submenu active
+               $(this).closest("a").parent().parent().addClass("active");
+            }
+        });
+    });        
+</script>
 
 <header></header>
 
+          
+      
+   
+
+
+
+    
 <body>
+    <div id="mySidenav" class="sidenav">
+        <div class="navbar-details">
+        <div href="#" id="my-name">Shaminder Singh Sekhon</div>
+        <div id="my-role">Agile Developer</div>
+        </div>
+        <a class="nav-link" href="#about">About </a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#awards">Awards</a>
+        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="#">Resume</a>
+    </div><div class="main"> 
 <div class="mainContent" id="about">
 <h1>ABOUT</h1>
 <p id="aboutMeShort"></p>
@@ -24,16 +66,16 @@
 </div>
 <div class="mainContent" id="awards">
 <h1>AWARDS</h1>
+<div id="awardCards"></div>
 </div>
 <div class="mainContent" id="education">
 <h1>EDUCATION</h1>
+<div id="eduCards"></div>
 </div>
 <div class="mainContent" id="contact">
  <h1>CONTACT</h1>
+ <div id="contactCards"></div>
 </div>
-<div class="mainContent" id="resume">
-<h1>RESUME</h1>
 </div>
-
 </body>
 </html>
