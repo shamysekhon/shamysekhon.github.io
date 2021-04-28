@@ -160,14 +160,17 @@ var education=[
 
 var contact=[
     {
+        img="c1",
         contactType:"email",
         contactDetail:"shaminder.singh.sekhon@gmail.com"
     },
     {
+        img="c2",
         contactType:"Git",
         contactDetail:"https://github.com/shamysekhon"
     },
     {
+        img="c3",
         contactType:"LinkedIn",
         contactDetail:"https://www.linkedin.com/in/shaminder-singh-sekhon/"
     },
@@ -375,7 +378,7 @@ function contactInfo(result, idx){
 
         <div class="contact-card-div"  id="contact-card-${idx}">
     
-        <img class="contact-image"  src="img/${result.contactType}.png" alt="${result.contactType}">
+        <img class="contact-image"  src="img/${result.img}.png" alt="${result.contactType}">
         <a class="contact-detail" href="${result.contactDetail}" style="color:rgb(9, 9, 95)"target="_blank">${result.contactDetail}</a>
         
        </div>`
