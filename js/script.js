@@ -369,7 +369,7 @@ function contactInfo(result, idx){
 
     <div class="contact-card-div"  id="contact-card-${idx}">
 
-    <img class="contact-image"  src="img/${result.img}.png" alt="${result.contactType}">
+    <img class="contact-image"  src="img/${result.img}.PNG" alt="${result.contactType}">
     <a class="contact-detail" style="color:rgb(9, 9, 95)" href="mailto:${result.contactDetail}" target="_blank">${result.contactDetail}</a>
     
    </div>`;
@@ -378,7 +378,7 @@ function contactInfo(result, idx){
 
         <div class="contact-card-div"  id="contact-card-${idx}">
     
-        <img class="contact-image"  src="img/${result.img}.png" alt="${result.contactType}">
+        <img class="contact-image"  src="img/${result.img}.PNG" alt="${result.contactType}">
         <a class="contact-detail" href="${result.contactDetail}" style="color:rgb(9, 9, 95)"target="_blank">${result.contactDetail}</a>
         
        </div>`
